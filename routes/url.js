@@ -1,18 +1,15 @@
-// packages needed in this file
+
 const express = require('express')
 const validUrl = require('valid-url')
 const shortid = require('shortid')
 
-// creating express route handler
+
 const router = express.Router()
 
-// import the Url database model
+
 const Url = require('../models/urlmodel')
 
-// @route    POST /api/url/shorten
-// @description     Create short URL
 
-// The API base Url endpoint
 const baseUrl = 'http:localhost:3000'
 
 router.post('/shorten', async (req, res) => {
